@@ -1,6 +1,7 @@
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs"
 import { cookies } from "next/headers"
-import { RedirectType, redirect } from "next/navigation"
+import { redirect } from "next/navigation"
+import { RedirectType } from "next/dist/client/components/redirect"
  
 import {
   Tabs,
@@ -9,6 +10,7 @@ import {
   TabsTrigger,
 } from "@/components/ui/tabs"
 import { CreateAccountForm } from "@/components/auth/create-account-form"
+import { LoginAccountForm } from "@/components/auth/login-account-form"
 
 export default async function Home() {
 
@@ -44,7 +46,7 @@ export default async function Home() {
         <CreateAccountForm />
       </TabsContent>
       <TabsContent value="login">
-      
+        <LoginAccountForm />
       </TabsContent>
     </Tabs>
     </div>
