@@ -5,6 +5,7 @@ import { useState, useEffect } from "react"
 
 import { useRouter } from "next/navigation"
 import { UserIcon } from "lucide-react"
+import { LogOutIcon } from "lucide-react"
 
 import {
     Avatar,
@@ -74,15 +75,15 @@ import Link from "next/link"
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuGroup>
-                    <DropdownMenuItem>
+                    <DropdownMenuItem className="cursor-pointer">
                     Profile
-                    <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
+                    <DropdownMenuShortcut><UserIcon /></DropdownMenuShortcut>
                     </DropdownMenuItem>
                 </DropdownMenuGroup>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem onClick={handleSignOut}>
+                <DropdownMenuItem className="cursor-pointer" onClick={handleSignOut}>
                     Log out
-                    <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
+                    <DropdownMenuShortcut><LogOutIcon /></DropdownMenuShortcut>
                 </DropdownMenuItem>
                 </DropdownMenuContent>
             </DropdownMenu>

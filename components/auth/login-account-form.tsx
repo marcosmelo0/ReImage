@@ -79,7 +79,7 @@ export function LoginAccountForm() {
                             <FormItem>
                                 <FormLabel>Login</FormLabel>
                                 <FormControl>
-                                    <Input className="focus-visible:ring-transparent" placeholder="Digite sua senha" {...field} />
+                                    <Input type="password" className="focus-visible:ring-transparent" placeholder="Digite sua senha" {...field} />
                                 </FormControl>
                                 <FormDescription>
                                     <FormMessage />
