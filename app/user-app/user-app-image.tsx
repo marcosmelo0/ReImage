@@ -59,7 +59,7 @@ export function UserAppImage({
         <ContextMenuTrigger>
           <div className="overflow-hidden rounded-md">
             <Image
-              src={`${publicUrl}/${image.name}`}
+              src={publicUrl + "/" + image.name}
               alt={image.name}
               width={width}
               height={height}
